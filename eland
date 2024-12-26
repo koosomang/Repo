@@ -1,0 +1,8 @@
+ podman run --mount type=bind,source=/root/model,destination=/models,readonly -it --rm docker.elastic.co/eland/eland \
+     eland_import_hub_model \
+       --url 'https://watsonx-discovery-elastic-latest.apps.673d99f9b6c6b35d1da0626d.ocp.techzone.ibm.com' \
+       --hub-model-id /models/multilingual-e5-small \
+       --task-type text_embedding \
+       --es-username elastic --es-password sV1N5lJY52j36d12SP7G9mVn \
+       --es-model-id multilingual-e5-small \
+       --insecure
